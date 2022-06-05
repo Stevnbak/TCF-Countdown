@@ -12,14 +12,14 @@ function timer() {
     var nextGoalTime = Math.floor(new Date(Date.UTC(2022, 5, 22, 12, 0, 0, 0)));
     var timer = Math.floor((goalTime - currentTime) / 1000);
     if (timer < 0) {
-        document.querySelector('#title').textContent = 'Pre-Season ends in';
+        document.querySelector('#title').textContent = 'Season 1 Countdown';
         timer = Math.floor((nextGoalTime - currentTime) / 1000);
         if (timer < 0) {
             document.querySelector('#title').textContent = 'Time since Season 1 started';
             timer = Math.floor((currentTime - nextGoalTime) / 1000);
         }
     } else {
-        document.querySelector('#title').textContent = 'Pre-Season starts in';
+        document.querySelector('#title').textContent = 'Pre-Season Countdown';
     }
 
     days = Math.floor(timer / 24 / 60 / 60);
