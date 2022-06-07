@@ -8,8 +8,8 @@ function startTimer() {
 function timer() {
     var dateLocal = new Date();
     var currentTime = Math.floor(dateLocal);
-    var goalTime = Math.floor(new Date(Date.UTC(2022, 5, 8, 12, 0, 0, 0)));
-    var nextGoalTime = Math.floor(new Date(Date.UTC(2022, 5, 22, 12, 0, 0, 0)));
+    var goalTime = Math.floor(new Date(Date.UTC(2022, 5, 8, 10, 0, 0, 0)));
+    var nextGoalTime = Math.floor(new Date(Date.UTC(2022, 5, 22, 10, 0, 0, 0)));
     var timer = Math.floor((goalTime - currentTime) / 1000);
     if (timer < 0) {
         document.querySelector('#title').textContent = 'Season 1 Countdown';
