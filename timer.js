@@ -8,18 +8,18 @@ function startTimer() {
 function timer() {
     var dateLocal = new Date();
     var currentTime = Math.floor(dateLocal);
-    var goalTime = Math.floor(new Date(Date.UTC(2022, 5, 8, 10, 0, 0, 0)));
+    var goalTime = Math.floor(new Date(Date.UTC(2022, 6, 4, 10, 0, 0, 0)));
     var nextGoalTime = Math.floor(new Date(Date.UTC(2022, 5, 22, 10, 0, 0, 0)));
     var timer = Math.floor((goalTime - currentTime) / 1000);
     if (timer < 0) {
-        document.querySelector('#title').textContent = 'Season 1 Countdown';
+        document.querySelector('#title').textContent = 'Season 1 countdown';
         timer = Math.floor((nextGoalTime - currentTime) / 1000);
         if (timer < 0) {
             document.querySelector('#title').textContent = 'Time since Season 1 started';
             timer = Math.floor((currentTime - nextGoalTime) / 1000);
         }
     } else {
-        document.querySelector('#title').textContent = 'Pre-Season Countdown';
+        document.querySelector('#title').textContent = 'Twitch drop countdown';
     }
 
     days = Math.floor(timer / 24 / 60 / 60);
